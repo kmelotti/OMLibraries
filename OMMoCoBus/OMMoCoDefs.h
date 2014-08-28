@@ -62,6 +62,8 @@ enum {
 #define OM_SER_WAIT 100
 // command data buffer size in bytes
 #define OM_SER_BUFLEN 32
+// length of the command packet header, address, sub-address, packet code, and length
+#define OM_SER_PKT_PREAMBLE 10
 
 // return codes
 #define OM_SER_OK 1
@@ -96,6 +98,17 @@ enum {
 #define OM_SER_COREID		2
 #define OM_SER_COREVER		3
 #define OM_SER_COREADDR		4
+
+
+
+// Position of the command code in the packet
+#define COM_POS  8
+
+// Position of the data length in the packet
+#define LEN_POS  9
+
+// Position of the beginning of the data section of the packet
+#define DATA_POS  10
 
 // commond broadcast commands
 
